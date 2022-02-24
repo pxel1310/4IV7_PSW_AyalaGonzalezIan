@@ -1,0 +1,16 @@
+*{
+    padding: .15rem;
+    margin: .15rem;
+    color: white;
+}
+
+body{
+    background-color: black;
+    background-image: url(../img/background_spider-man.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.usuario{
+    text-transform: uppercase;
+}
