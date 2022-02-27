@@ -1,0 +1,86 @@
+* {
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    font: 16px Helvetica, Sans-Serif;
+    line-height: 24px;
+    background: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 120%;
+}
+
+.datos{
+    font: 16px;
+}
+
+.container {
+    clear: both;
+}
+
+#pagina { 
+    width: 900px;
+    margin: 30px auto 30px; 
+}
+
+#id {
+    float: right;
+    margin: -10px 0px 0px 10px;
+}
+
+h1 { 
+    margin: 5px 0px 16px 0px;
+    padding: 5px 0px 16px 0px;
+    font-size: 42px; 
+    font-weight: bold;
+    border-bottom: 1.5px solid rgba(65, 60, 60, 0.75);
+}
+
+p {
+    margin: 0px 0px 16px 0px;
+}
+
+p span {
+    font-size: 18px;
+    color: rgb(49, 31, 207); 
+    font-weight: normal;
+}
+
+ul {
+    margin: 0px 0px 32px 12px;
+}
+
+#objective {
+    width: 500px; float: left;
+}
+ 
+#objective p {
+    font-family: Helvetica, Sans-Serif;
+    font-style: italic;
+    color: rgb(54, 49, 49);
+}
+     
+dt {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18px; 
+    text-align: left;
+    padding: 0px 24px 0px 0px; 
+    width: 100px;
+    float: left;
+    height: 150px;
+}
+
+       
+dd.container   {
+    float: none;
+    margin: 0;
+    height: 12px;
+}
+
+.regreso{
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(255, 0, 85);
+}
