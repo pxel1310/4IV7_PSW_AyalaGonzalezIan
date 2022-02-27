@@ -1,16 +1,21 @@
-*{
-    padding: .15rem;
-    margin: .15rem;
+* {
+    padding: .2rem;
+    margin: .2rem;
     color: white;
 }
 
-body{
+body {
     background-color: black;
     background-image: url(../img/background_spider-man.png);
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
-.usuario{
-    text-transform: uppercase;
+.lista {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+.usuario {
+    font-size: 24px;
 }
