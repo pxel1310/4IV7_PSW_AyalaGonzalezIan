@@ -13,6 +13,7 @@ body {
 
 .datos{
     font: 16px;
+    padding: auto;
 }
 
 .container {
@@ -32,8 +33,7 @@ body {
 h1 { 
     margin: 5px 0px 16px 0px;
     padding: 5px 0px 16px 0px;
-    font-size: 42px; 
-    font-weight: bold;
+    font-size: 45px;
     border-bottom: 1.5px solid rgba(65, 60, 60, 0.75);
 }
 
