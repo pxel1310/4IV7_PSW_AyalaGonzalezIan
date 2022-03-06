@@ -1,0 +1,48 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    margin: 10px;
+}
+
+body{
+    font-family: monospace;
+    background-image: url(../img/background.png);
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+h1{
+    color: rgb(180, 40, 225);
+}
+span{
+    font-family: cursive;
+    color: rgb(120, 100, 230);
+}
+
+a:link{
+    text-decoration: none;
+    margin: 10px;
+    background-color: rgb(173, 195, 238);
+}
+
+#tabla{
+    background-image: url(../img/backgrounda_tabla.png);
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+    text-align: justify;
+    border-collapse: collapse;
+}
+
+th, td{
+    border: solid 1px black;
+    padding: 0;
+}
+
+
+#cointeiner{
+    margin: 150px auto;
+    width: 600px;
+}
+footer{
+    font-family: cursive;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Practico</title>
+    <script src="js/algoritmoValidar.js"></script>
+</head>
+<link rel="stylesheet" href="css/style.css">
+<link rel="shortcut icon" type="image/x-icon" href="img/shortcut.jpg">
+<body>
+    <header>
+        <h1>Interes Compuesto</h1>
+    </header>
+    <div>
+        <hr> 
+        <h3>Favor de escribir los valores de "Valor Inicial" y "Cuota Inicial" en decimale <span> -> 100000.00</span></h3>
+        <h3>Se conciderar con un interes de <strong>3.94%</strong></h3>
+        <br>
+    </div>
+    <div id="container">
+        <form method="post" name="interescompuesto" onsubmit="algoritmo(this)" action="">
+            <table id="tabla">
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="auto_valor">Valor del Automovil <span> -> solo rangos de 100,000 a 1,000,000</span></label>
+                        </td>
+                        <td>
+                            <input name="auto_valor" type="auto_valor" id="auto_valor"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="cuota_inicial">Cuota Inicial <span> -> solo valores por arriva del 10 % de valor del automovil</span></label>
+                        </td>
+                        <td>
+                            <input name="cuota_inicial" type="cuota_inicial" id="cuota_inicial"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="periodo">Perido de pago <span> -> debe ser de 3, 6 , 9, 12 o 18 meses </span></label>
+                        </td>
+                        <td>
+                            <input name="periodo" type="periodo" id="periodo"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="final">Valor de capital total acumulado:</label>
+                        </td>
+                        <td>
+                            <input name="final" type="final" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" rowspan="1">
+                            <input value="Calcular" type="button" onclick="algoritmo();" />
+                            <input type="reset" name="borrar" value="Borrrar Datos" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <br>
+    <div id="regreso">
+        <a href="../index.html">Regresar al Directorio</a>
+    </div>
+    <hr>
+    <footer>
+        <h3>Datos Personales:</h3>
+        <li>Ian Ayala González</li>
+        <li>Grupo: 4IV7</li>
+        <li>Boleta: 2021090083</li>
+    </footer>
+</body>
+</html>
