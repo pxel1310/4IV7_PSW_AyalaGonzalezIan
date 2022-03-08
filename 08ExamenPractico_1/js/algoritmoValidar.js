@@ -13,7 +13,7 @@ function algoritmo(){
             }
         }
     }
-
+    
     var auto_valor = parseFloat (document.interescompuesto.auto_valor.value);
     var periodo = parseFloat (document.interescompuesto.periodo.value);
     var interes = 0.0394
@@ -70,10 +70,4 @@ function algoritmo(){
     }
 
     validar
-
-    if(!todoesvalido){
-        alert("Escriba unicamente numeros en el campo: periodo");
-        interescompuesto.periodo.focus();
-        return false;
-    }
 }
