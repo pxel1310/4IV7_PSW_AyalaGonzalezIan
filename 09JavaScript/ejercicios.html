@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../09JavaScript/css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../09JavaScript/img/shorcut.jpg">
+    <script src="js/interes.js" ></script>
+    <title>Ejercicios Js</title>
+</head>
+<body>
+    <form name="formulario" method="post" action="">
+        <label> Formulario para el calculo de inversión de capital al 3.7% anual </label>
+        <br>
+        <table>
+            <tr>
+                <td>Introduce la cantidad que deseas invertir</td>
+                <td><input type="text" name="cantidad" onkeypress="return validarn(event)"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Calcular Interes" name="enviar" onclick="interes()" ></td>
+            </tr>
+            <tr>
+                <td>Su saldo total con el interes al 3.7% anual es de:</td>
+                <td><input type="text" name="sueldoI" id="cantidadI" readonly="readonly" class="input_text"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Borrar Datos" name="borrar" onclick="borrard()" ></td>
+            </tr>
+        </table>
+    </form>
+    <footer>
+        <a href="../index.html">Regresar al Directorio</a>
+    </footer>
+</body>
+</html>

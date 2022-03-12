@@ -1,0 +1,15 @@
+* {
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    font: 18px;
+    font-family: cursive;
+    line-height: 24px;
+    background: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgba(17,19,18,255);
+    color: aliceblue;
+}
