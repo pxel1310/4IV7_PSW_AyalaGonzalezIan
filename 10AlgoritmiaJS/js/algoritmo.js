@@ -11,17 +11,17 @@ function problema1() {
 
   var p1_input = document.getElementById("p1-input").value;
   var p1_frase = p1_input.split(" ").reverse();
-  var p1_newStr = " ";
+  var p1_newfr = " ";
 
 
   p1_frase.forEach(function (palabra, i) {
     if (i != 0 || i != p1_frase.length) {
-      p1_newStr += " ";
-      p1_newStr += palabra;
+      p1_newfr += " ";
+      p1_newfr += palabra;
     }
   });
 
-  document.getElementById("p1-output").textContent = p1_newStr;
+  document.getElementById("p1-output").textContent = p1_newfr;
 }
 
 //Problema 2
