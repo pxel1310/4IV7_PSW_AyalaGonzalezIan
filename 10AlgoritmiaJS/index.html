@@ -1,260 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../10AlgoritmiaJS/css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
-      rel="stylesheet"
-    />
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="../10AlgoritmiaJS/img/shortcut.jpg"
-    />
-    <script src="js/algoritmo.js"></script>
-    <title>Ejercicios de Algoritmia</title>
-  </head>
-  <body>
-    <div class="container">
-      <!-- Problema 1 -->
-      <div class="problema-container">
-        <h2 class="problema-title">Problema #1</h2>
-        <h3>
-          Dada una lista de <strong>palabras</strong> separadas por un espacio,
-          invierte el orden de dichas palabras. Las palabras pueden estar
-          separadas por un espacio.
-        </h3>
-        <div class="problema-content">
-          <input
-            type="text"
-            class="problema-input"
-            placeholder="Ingresa las palabras separadas por un espacio: "
-            id="p1-input"
-          />
-          <button
-            type="button"
-            class="problema-button"
-            style="margin-top: 1rem"
-            onclick="problema1()"
-          >
-            Invertir palabras
-          </button>
-          <pre class="problema-output" id="p1-output">Esperando datos...</pre>
-        </div>
-      </div>
-      <br />
-      <!-- Problema 2 -->
-      <div class="problema-container">
-        <h2 class="problema-title">Problema #2</h2>
-        <h3>
-          Dados 2 vectores
-          <em>v1 = (x1, x2, x3, xN), v2 = (y1, y2, y3, yN)</em> y teniendo
-          permitido permutar el ordende los elementos de dicho vector, encontrar
-          el minimo producto escalar entre ambos vectores.
-          <br />
-          <br />
-          (El producto escalar se forma de la siguiente manera:
-          <em>x1*y1 + x2*y2 + xN*yN ....</em>)
-        </h3>
-        <div class="problema-content">
-          <div
-            class="tablas"
-            style="width: 100%; display: flex; justify-content: center"
-          >
-            <table class="problema-table" style="width: 40%">
-              <thead>
-                <tr>
-                  <th><em>X</em></th>
-                  <th>#</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>x1</td>
-                  <td>
-                    <input
-                      type="number"
-                      class="problema-input"
-                      id="p2-x1"
-                      placeholder="Ingresa el valor de x1"
-                      onkeypress="return validarn(event)"
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>x2</td>
-                  <td>
-                    <input
-                      type="number"
-                      class="problema-input"
-                      id="p2-x2"
-                      placeholder="Ingresa el valor de x2"
-                      onkeypress="return validarn(event)"
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>x3</td>
-                  <td>
-                    <input
-                      type="number"
-                      class="problema-input"
-                      id="p2-x3"
-                      placeholder="Ingresa el valor de x3"
-                      onkeypress="return validarn(event)"
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>x4</td>
-                  <td>
-                    <input
-                      type="number"
-                      class="problema-input"
-                      id="p2-x4"
-                      placeholder="Ingresa el valor de x4"
-                      onkeypress="return validarn(event)"
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>x5</td>
-                  <td>
-                    <input
-                      type="number"
-                      class="problema-input"
-                      id="p2-x5"
-                      placeholder="Ingresa el valor de x5"
-                      onkeypress="return validarn(event)"
-                    />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
 
-            <table class="problema-table" style="width: 40%">
-              <thead>
-                <tr>
-                  <th><em>Y</em></th>
-                  <th>#</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>y1</td>
-                  <td>
-                    <input
-                      type="number"
-                      class="problema-input"
-                      id="p2-y1"
-                      placeholder="Ingresa el valor de y1"
-                      onkeypress="return validarn(event)"
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>y2</td>
-                  <td>
-                    <input
-                      type="number"
-                      class="problema-input"
-                      id="p2-y2"
-                      placeholder="Ingresa el valor de y2"
-                      onkeypress="return validarn(event)"
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>y3</td>
-                  <td>
-                    <input
-                      type="number"
-                      class="problema-input"
-                      id="p2-y3"
-                      placeholder="Ingresa el valor de y3"
-                      onkeypress="return validarn(event)"
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>y4</td>
-                  <td>
-                    <input
-                      type="number"
-                      class="problema-input"
-                      id="p2-y4"
-                      placeholder="Ingresa el valor de y4"
-                      onkeypress="return validarn(event)"
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>y5</td>
-                  <td>
-                    <input
-                      type="number"
-                      class="problema-input"
-                      id="p2-y5"
-                      placeholder="Ingresa el valor de y5"
-                      onkeypress="return validarn(event)"
-                    />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../10AlgoritmiaJS/css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/x-icon" href="../10AlgoritmiaJS/img/shortcut.jpg" />
+  <script src="js/algoritmo.js"></script>
+  <title>Ejercicios de Algoritmia</title>
+</head>
 
-          <button
-            type="button"
-            class="problema-button"
-            style="margin-top: 1rem"
-            onclick="problema2()"
-          >
-            Calcular Vector
-          </button>
-          <pre class="problema-output" id="p2-output">Esperando datos...</pre>
-        </div>
-      </div>
-      <br />
-      <!-- Problema 3 -->
-      <div class="problema-container">
-        <h2 class="problema-title">Problema #3</h2>
-        <h3>
-          Dada una lista de palabras, encontrar la palabra que mas numero de
-          caracteres unicos tenga.
-        </h3>
-        <br />
-        <h3>Ejemplo: CASA = 3 (c,a,s) PERRO = 4 (p,e,r,o)</h3>
-        <br />
-        <h3>
-          Considera solamente el alfabeto de A-Z, en mayusculas. Las palabras
-          ingresadas deberan estar separadas por una coma, no se aceptan
-          espacios.
-        </h3>
-        <div class="problema-content">
-          <input
-            type="text"
-            class="problema-input"
-            placeholder="Ingresa las palabras separadas por una coma: "
-            id="p3-input"
-          />
-          <button
-            type="button"
-            class="problema-button"
-            style="margin-top: 1rem"
-            onclick="problema3()"
-          >
-            Contar Letras
-          </button>
-          <pre class="problema-output" id="p3-output">Esperando datos...</pre>
-        </div>
+<body>
+  <div class="container">
+    <!-- Problema 1 -->
+    <div class="problema-container">
+      <h2 class="problema-title">Problema #1</h2>
+      <h3>
+        Dada una lista de <strong>palabras</strong> separadas por un espacio,
+        invierte el orden de dichas palabras. Las palabras pueden estar
+        separadas por un espacio.
+      </h3>
+      <div class="problema-content">
+        <input type="text" class="problema-input" placeholder="Ingresa las palabras separadas por un espacio: "
+          id="p1-input" />
+        <button type="button" class="problema-button" style="margin-top: 1rem" onclick="problema1()">
+          Invertir palabras
+        </button>
+        <pre class="problema-output" id="p1-output">Esperando datos...</pre>
       </div>
     </div>
-    <footer class="footer-container">
-      <a href="../index.html">Regresar la directorio</a>
-    </footer>
-  </body>
+    <br />
+    <!-- Problema 2 -->
+    <div class="problema-container">
+      <h2 class="problema-title">Problema #2</h2>
+      <h3>
+        Dados 2 vectores
+        <em>v1 = (x1, x2, x3, xN), v2 = (y1, y2, y3, yN)</em> y teniendo
+        permitido permutar el ordende los elementos de dicho vector, encontrar
+        el minimo producto escalar entre ambos vectores.
+        <br />
+        <br />
+        (El producto escalar se forma de la siguiente manera:
+        <em>x1*y1 + x2*y2 + xN*yN ....</em>)
+      </h3>
+      <div class="problema-content">
+        <div class="tablas" style="width: 100%; display: flex; justify-content: center">
+          <table class="problema-table" style="width: 40%">
+            <thead>
+              <tr>
+                <th><em>X</em></th>
+                <th>#</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>x1</td>
+                <td>
+                  <input type="number" class="problema-input" id="p2-x1" placeholder="Ingresa el valor de x1"
+                    onkeypress="return validarn(event)" />
+                </td>
+              </tr>
+              <tr>
+                <td>x2</td>
+                <td>
+                  <input type="number" class="problema-input" id="p2-x2" placeholder="Ingresa el valor de x2"
+                    onkeypress="return validarn(event)" />
+                </td>
+              </tr>
+              <tr>
+                <td>x3</td>
+                <td>
+                  <input type="number" class="problema-input" id="p2-x3" placeholder="Ingresa el valor de x3"
+                    onkeypress="return validarn(event)" />
+                </td>
+              </tr>
+              <tr>
+                <td>x4</td>
+                <td>
+                  <input type="number" class="problema-input" id="p2-x4" placeholder="Ingresa el valor de x4"
+                    onkeypress="return validarn(event)" />
+                </td>
+              </tr>
+              <tr>
+                <td>x5</td>
+                <td>
+                  <input type="number" class="problema-input" id="p2-x5" placeholder="Ingresa el valor de x5"
+                    onkeypress="return validarn(event)" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="problema-table" style="width: 40%">
+            <thead>
+              <tr>
+                <th><em>Y</em></th>
+                <th>#</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>y1</td>
+                <td>
+                  <input type="number" class="problema-input" id="p2-y1" placeholder="Ingresa el valor de y1"
+                    onkeypress="return validarn(event)" />
+                </td>
+              </tr>
+              <tr>
+                <td>y2</td>
+                <td>
+                  <input type="number" class="problema-input" id="p2-y2" placeholder="Ingresa el valor de y2"
+                    onkeypress="return validarn(event)" />
+                </td>
+              </tr>
+              <tr>
+                <td>y3</td>
+                <td>
+                  <input type="number" class="problema-input" id="p2-y3" placeholder="Ingresa el valor de y3"
+                    onkeypress="return validarn(event)" />
+                </td>
+              </tr>
+              <tr>
+                <td>y4</td>
+                <td>
+                  <input type="number" class="problema-input" id="p2-y4" placeholder="Ingresa el valor de y4"
+                    onkeypress="return validarn(event)" />
+                </td>
+              </tr>
+              <tr>
+                <td>y5</td>
+                <td>
+                  <input type="number" class="problema-input" id="p2-y5" placeholder="Ingresa el valor de y5"
+                    onkeypress="return validarn(event)" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <button type="button" class="problema-button" style="margin-top: 1rem" onclick="problema2()">
+          Calcular Vector
+        </button>
+        <pre class="problema-output" id="p2-output">Esperando datos...</pre>
+      </div>
+    </div>
+    <br />
+    <!-- Problema 3 -->
+    <div class="problema-container">
+      <h2 class="problema-title">Problema #3</h2>
+      <h3>
+        Dada una lista de palabras, encontrar la palabra que mas numero de
+        caracteres unicos tenga.
+      </h3>
+      <br />
+      <h3>Ejemplo: CASA = 3 (c,a,s) PERRO = 4 (p,e,r,o)</h3>
+      <br />
+      <h3>
+        Considera solamente el alfabeto de A-Z, en mayusculas. Las palabras
+        ingresadas deberan estar separadas por una coma, no se aceptan
+        espacios.
+      </h3>
+      <div class="problema-content">
+        <input type="text" class="problema-input" placeholder="Ingresa las palabras separadas por una coma: "
+          id="p3-input" />
+        <button type="button" class="problema-button" style="margin-top: 1rem" onclick="problema3()">
+          Contar Letras
+        </button>
+        <pre class="problema-output" id="p3-output">Esperando datos...</pre>
+      </div>
+    </div>
+  </div>
+  <footer class="footer-container">
+    <a href="../index.html">Regresar la directorio</a>
+  </footer>
+</body>
+
 </html>
