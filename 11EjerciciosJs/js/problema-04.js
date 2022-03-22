@@ -28,7 +28,6 @@ function problema04() {
     document.formulario04.p4_input_exa.value > 10 ||
     document.formulario04.p4_input_tra.value > 10
   ) {
-    alert("Las calificaciones deben ser entre 1 y 10");
     return validarn_problema04(event);
   } else {
     var p4_input_1re = parseFloat(document.formulario04.p4_input_1re.value);
