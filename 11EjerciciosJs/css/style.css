@@ -1,0 +1,107 @@
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "krub", sans-serif;
+  background-image: linear-gradient(to top, #daa3ca 0%, #a6c1ee 100%);
+  font-size: 1.6rem;
+}
+
+/* Globales */
+.container {
+  width: 95%;
+  max-width: 145rem; /* 1200px */
+  margin: 0 auto;
+}
+.problema-title {
+  text-align: center;
+}
+h2 {
+  font-size: 2.5rem;
+  color: #f0f0f0;
+  font-style: italic;
+  border-bottom: 1px solid #c786b9;
+  padding-bottom: 0.5rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+button {
+  background-color: transparent;
+  border: 1px solid #000000;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+}
+button:hover {
+  background-color: rgb(158, 253, 237);
+}
+input {
+  font-size: 1.6rem;
+  font-style: italic;
+}
+input:hover{
+  color: #7323d4;
+}
+
+.problema-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.problema-content,
+.problema-output {
+  margin: 0 auto;
+}
+.problema-input {
+  width: 28rem;
+  border: 1px solid rgb(233, 171, 219);
+  background-color: transparent;
+  align-items: center;
+}
+
+/* Tablas */
+.table.problema-table {
+  margin: 1rem;
+  border: 1px solid #000000;
+}
+
+td {
+  border-bottom: 1px solid #6b3670;
+  padding-bottom: 1rem;
+  border-left: 1px solid #6b3670;
+}
+.problema-output {
+  width: 70%;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: monospace;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+/* Footer */
+.footer-container {
+  margin-left: 4rem;
+  margin-bottom: 3rem
+}
+.footer-container a {
+  text-decoration: none;
+  color: #000000;
+  padding: 0.5rem 1rem;
+  border: 1px solid #000000;
+  border-radius: 1rem;
+  background-color: rgb(190, 251, 255);
+}
+.footer-container a:hover {
+  background-color: rgb(219, 148, 210);
+}

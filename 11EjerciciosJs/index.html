@@ -1,21 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../11EjerciciosJs/css/">
-    <link rel="shortcut icon" type="image/x-icon" href="../11EjerciciosJs/img/">
-    <script src="../11EjerciciosJs/js/" ></script>
-    <title>Document</title>
-</head>
-<body>
-    <div id="Ploblema 1">
-
-    </div>
-    
-    <div id="Ploblema 2">
-
-    </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../11EjerciciosJs/css/style.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../11EjerciciosJs/img/shortcut.jpg"
+    />
+    <script src="js/problema-01.js"></script>
+    <script src="js/problema-02.js"></script>
+    <script src="js/problema-03.js"></script>
+    <script src="js/problema-04.js"></script>
+    <script src="js/problema-05.js"></script>
+    <script src="js/problema-06.js"></script>
+    <title>Ejercicios de JS</title>
+  </head>
+  <body>
+    <main class="container">
+      <!-- Problema 1 -->
+      <div class="problema-container">
+        <h2 class="problema-title">Problema #1</h2>
+        <h3>
+          Suponga que un individuo desea invertir su capital en un banco y 
+          desea saber cuánto dinero ganará después de n si el banco paga a 
+          razón de 2% mensual. <em>Apartir de 48 meses no se conciderar 
+            valores mayores apartir de el.
+          </em>
+        </h3>
+        <div class="problema-content">
+          <form method="post" name="formulario01">
+            <input
+            type="text"
+            id="p1_input_c"
+            class="problema-input"
+            placeholder="Ingresa las palabras separadas por un espacio: "
+            onkeypress="return validarn_problema01(event)"
+          />
+          <input
+            type="text"
+            id="p1_input_m"
+            class="problema-input"
+            placeholder="Selecciona la cantidad de meses 
+            (Max. 48 meses)"
+            onkeypress="return validarn_problema01(event)"
+          />
+          <br>
+          <button
+            type="button"
+            class="problema-button"
+            style="margin-top: 1rem;"
+            onclick="problema01()"
+          >
+            Calcular Capital
+          </button>
+          <button
+            type="button"
+            class="problema-button"
+            style="margin-top: 1rem;"
+            onclick="borrar_problema01()"
+          >
+            Borrar
+          </button>
+          <pre class="problema-output" id="p1_output">Esperando datos...</pre>
+          </form>
+        </div>
+      </div>
+      <br />
+      <!-- Problema 2 -->
+      <div class="problema-container">
+        <h2 class="problema-title">Problema #2</h2>
+        <h3>
+          Un vendedor recibe un sueldo base más un 10% extra por comisión de sus ventas, 
+          el vendedor desea saber cuánto dinero obtendrá por concepto de comisiones por 
+          las tres ventas que realiza en el mes y el total que recibirá en el mes tomando 
+          en cuenta su sueldo base y comisiones.
+        </h3>
+        <div class="problema-content">
+          <form method="post" name="formulario02">
+            <input
+            type="text"
+            id="p2_input"
+            class="problema-input"
+            placeholder="Ingresa el sueldo base del vendedor: "
+            onkeypress="return validarn_problema02(event)"
+          />
+          <br>
+          <button
+            type="button"
+            class="problema-button"
+            style="margin-top: 1rem;"
+            onclick="problema02()"
+          >
+            Calcular Concepto y el Total
+          </button>
+          <button
+            type="button"
+            class="problema-button"
+            style="margin-top: 1rem;"
+            onclick="borrar_problema02()"
+          >
+            Borrar
+          </button>
+          <pre class="problema-output" id="p2_output_com">Esperando datos...</pre>
+          <pre class="problema-output" id="p2_output_total">Esperando datos...</pre>
+          </form>
+        </div>
+      </div>
+      <br />
+      <!-- Problema 3 -->
+      <div class="problema-container">
+        <h2 class="problema-title">Problema #3</h2>
+        <h3>
+          Una tienda ofrece un descuento del sobre el total de la compra y un cliente desea 
+          saber cuanto deberá pagar finalmente por su compra.
+          </em>
+        </h3>
+        <div class="problema-content">
+          <form method="post" name="formulario03">
+            <input
+            type="text"
+            id="p3_input"
+            class="problema-input"
+            placeholder="Ingresar precio del objeto a pagar: "
+            onkeypress="return validarn_problema03(event)"
+          />
+          <br>
+          <button
+            type="button"
+            class="problema-button"
+            style="margin-top: 1rem;"
+            onclick="problema03()"
+          >
+            Calcular Precio
+          </button>
+          <button
+            type="button"
+            class="problema-button"
+            style="margin-top: 1rem;"
+            onclick="borrar_problema03()"
+          >
+            Borrar
+          </button>
+          <pre class="problema-output" id="p3_output_des">Esperando datos...</pre>
+          <pre class="problema-output" id="p3_output_final">Esperando datos...</pre>
+          </form>
+        </div>
+      </div>
+      <br />
+      <!-- Problema 4 -->
+      <div class="problema-container">
+        <h2 class="problema-title">Problema #4</h2>
+        <h3>
+          Un alumno desea saber cuál su calificación final en la materia de Algoritmos. 
+          Dicha calificación se compone de los siguientes porcentajes:<br>
+          -> 55% del promedio de sus tres calificaciones parciales. <br>
+          -> 30% de la calificación del examen final. <br>
+          -> 15% de la calificación de un trabajo final. <br>
+          </em>
+        </h3>
+        <br>
+        <div class="problema-content">
+          <form method="post" name="formulario04">
+            <table name="tabla04_1" class="problema-table">
+              <caption>Calificaciones / Paciales</caption>
+              <br>
+              <tbody>
+                <tr>
+                  <th>1re Parcial</th>
+                  <th>2do Parcial</th>
+                  <th>3re Parcial</th>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="text"
+                      id="p4_input_1re"
+                      class="problema-input"
+                      placeholder="Ingresa la calificacion del 1re: "
+                      onkeypress="return validarn_problema04(event)"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      id="p4_input_2do"
+                      class="problema-input"
+                      placeholder="Ingresa la calificacion del 2do: "
+                      onkeypress="return validarn_problema04(event)"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      id="p4_input_3ro"
+                      class="problema-input"
+                      placeholder="Ingresa la calificacion del 3ro: "
+                      onkeypress="return validarn_problema04(event)"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <table name="tabla04_2" class="problema-table">
+              <caption>Calificaciones / Extras</caption>
+              <br>
+              <tbody>
+                <tr>
+                  <th>Examen Final</th>
+                  <th>Trabajo Final</th>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="text"
+                      id="p4_input_exa"
+                      class="problema-input"
+                      placeholder="Ingresa la calificacion del examen: "
+                      onkeypress="return validarn_problema04(event)"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="text"
+                      id="p4_input_tra"
+                      class="problema-input"
+                      placeholder="Ingresa la calificacion del trabajo: "
+                      onkeypress="return validarn_problema04(event)"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <button
+              type="button"
+              class="problema-button"
+              style="margin-top: 1rem;"
+              onclick="problema04()"
+            >
+              Calcular Calificación
+            </button>
+            <button
+              type="button"
+              class="problema-button"
+              style="margin-top: 1rem;"
+              onclick="borrar_problema04()"
+            >
+              Borrar
+            </button>
+            <pre class="problema-output" id="p4_output">Esperando datos...</pre>
+          </form>
+        </div>
+      </div>
+      <br />
+      <!-- Problema 5 -->
+      <div class="problema-container">
+        <h2 class="problema-title">Problema #5</h2>
+        <h3>
+          Un maestro desea saber qué porcentaje de hombres y que porcentaje de mujeres hay en un 
+          grupo de estudiantes. (Solo se ingresa H y M).
+        </h3>
+        <div class="problema-content">
+          <form method="post" name="formulario05">
+            <input
+            type="text"
+            id="p5_input_h"
+            class="problema-input"
+            placeholder="Ingresa el número de Hombres: "
+            onkeypress="return validarn_problema05(event)"
+          />
+          <input
+            type="text"
+            id="p5_input_m"
+            class="problema-input"
+            placeholder="Ingresar el número de Mujeres:"
+            onkeypress="return validarn_problema05(event)"
+          />
+          <br>
+          <button
+            type="button"
+            class="problema-button"
+            style="margin-top: 1rem;"
+            onclick="problema05()"
+          >
+            Calcular Porcentaje de Cada Grupo
+          </button>
+          <button
+            type="button"
+            class="problema-button"
+            style="margin-top: 1rem;"
+            onclick="borrar_problema05()"
+          >
+            Borrar
+          </button>
+          <pre class="problema-output" id="p5_output">Esperando datos...</pre>
+          <pre class="problema-output" id="p5_output_h">Esperando datos...</pre>
+          <pre class="problema-output" id="p5_output_m">Esperando datos...</pre>
+          </form>
+        </div>
+      </div>
+      <br />
+      <!-- Problema 6 -->
+      <div class="problema-container">
+        <h2 class="problema-title">Problema #6</h2>
+        <h3>
+          Realizar un algoritmo que calcule la edad de una persona. (“De fechas con año bisiesto”).
+          <em>Introduce la fecha de nacimiento.</em>
+        </h3>
+        <div class="problema-content">
+          <form method="post" name="formulario06">
+            <input
+            type="date"
+            id="p6_input"
+            min="1950-01-01"
+            max="2035-12-31"
+            class="problema-input"
+            />
+            <button
+            type="button"
+            class="problema-button"
+            style="margin-top: 1rem;"
+            onclick="problema06()"
+            >
+            Calcular Edad
+          </button>
+          <br>
+          <p class="problema-output" id="p6_output">Esperando datos...</p>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+  <footer class="footer-container">
+    <a href="../index.html">Regresar al directorio</a>
+  </footer>
 </html>
