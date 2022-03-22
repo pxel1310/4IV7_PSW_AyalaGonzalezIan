@@ -9,7 +9,7 @@ body {
     background-image: url(../img/background_spider-man.png);
     background-repeat: no-repeat;
     background-size: 95%;
-    font-family: monospace;
+    font-family: "krub", sans-serif;
 }
 
 h1 { 
