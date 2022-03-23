@@ -1,0 +1,195 @@
+:root {
+    /* Colores */
+    --black: #000000;
+    --white: #ffffff;
+    --orange: #ffe3b7;
+    --hover: #00c0b0;
+
+    /* tipografia */
+    --tiles:'Montserrat', sans-serif;
+
+    --principalFont: 'Open Sans', sans-serif;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    background-color: var(--orange);
+}
+
+*,
+*¨:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    min-height: 100%;
+    font-family: var(--principalFont);
+    font-size: 1.6rem;
+    line-height: 2;
+    text-align: justify;
+}
+
+/* Globals */
+.container {
+    max-width: 95%;
+    width: 1200rem;
+    margin: 0 auto;
+}
+.centrar-texto {
+    text-align: center;
+    margin: 0;
+}
+.no-margin {
+    margin: 0 auto;
+}
+h1 {font-size: 4rem;}
+h2 {font-size: 3rem;}
+h3 {font-size: 2rem;}
+h4 {font-size: 1.5rem;}
+
+header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-size: cover;
+    background-color: rgb(130, 120, 90);
+    color: rgb(95, 79, 30);
+}
+
+    /* Main */
+/* Que es un SSJ */
+.main-container {
+    margin-top: 17rem;
+}
+.ssj {
+    margin-top: 2rem;
+}
+.img-seccion1 {
+    margin: 0 auto;
+}
+.img-seccion1__seccion1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;   
+}
+.img-seccion1__seccion1 img {
+    margin: 0 auto;
+}
+.img-seccion1__seccion2 {
+    margin-top: 2rem;
+}
+.img-seccion1__seccion2 img {
+    display: flex;
+    margin: 0 auto;
+}
+
+/* Historia */
+.historia {
+    margin-top: 3rem;
+}
+.img-seccion2 {
+    display: flex;
+    justify-content: space-around;
+}
+.seccion__img1 {
+    max-width: 100%;
+}
+.seccion__img2 {
+    max-width: 25.5rem;
+}
+.seccion__img3 {
+    max-width: 24.3rem;
+}
+
+/* Caracteristicas */
+.caracteristicas {
+    margin-top: 3rem;
+}
+.caracteristicas-ssj {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+/* Explicacion SSJ, Aparicion */
+.ssj-explicacion {
+    margin-top: 2rem;
+}
+.videos-explicacion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.videos-explicacion iframe {
+    display: flex;
+    margin: 0 auto;
+}
+
+/* niveles */
+.niveles {
+    margin-top: 2rem;
+}
+.lista-fases li {
+    list-style: none;
+}
+.lista-fases a {
+    text-decoration: none;
+    color: var(--black);
+}
+.lista-fases a:hover {
+    color: var(--hover);
+}
+
+/* No tocar de momento*/ 
+#contacto {
+    margin: 3px;
+    padding: 0;
+}
+.footer {
+    display: flex;
+    justify-content: space-around;
+}
+.form {
+    margin-top: 15rem;
+}
+
+/* Pag Extras */
+.second-container {
+    margin-top: 10rem;
+}
+.img-pagsecundarias {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.img-falso2 {
+    max-width: 10%;
+}
+.primer-grado2 {
+    max-width: 11.1%;
+}
+.tercer-grado1,
+.tercer-grado2,
+.max-poder2,
+.img-ssj3_2 {
+    max-width: 25%;
+}
+.max-poder2 {
+    max-width: 20%;
+}
+.img-ssj2_2,
+.ssj-dios_2 {
+    max-width: 15%;
+}
+.img-ssj-evolucionado {
+    max-width: 29%;
+}
+.ssj-azul_2 {
+    max-width: 11.5%;
+}
+.ssj-rosado_2 {
+    max-width: 10.97%;
+}
