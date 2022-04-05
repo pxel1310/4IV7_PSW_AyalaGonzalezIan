@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.27, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.28, for Win64 (x86_64)
 --
 -- Host: localhost    Database: alumnos
 -- ------------------------------------------------------
--- Server version	8.0.25
+-- Server version	8.0.28
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -18,8 +18,6 @@
 --
 -- Table structure for table `alumnobatiz`
 --
-create database alumnos;
-use alumnos;
 
 DROP TABLE IF EXISTS `alumnobatiz`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
@@ -33,7 +31,7 @@ CREATE TABLE `alumnobatiz` (
   PRIMARY KEY (`boleta`),
   KEY `nombre` (`nombre`),
   KEY `appat` (`appat`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +40,7 @@ CREATE TABLE `alumnobatiz` (
 
 LOCK TABLES `alumnobatiz` WRITE;
 /*!40000 ALTER TABLE `alumnobatiz` DISABLE KEYS */;
-INSERT INTO `alumnobatiz` VALUES (1,'Juanito','De la Rosa','Perez','12345678'),(2,'Diana','Castillo','Cardenas',NULL);
+INSERT INTO `alumnobatiz` VALUES (1,'A','A','A','1'),(2,'B','B','B','2'),(3,'C','C','C','3'),(4,'D','D','D','4'),(5,'E','E','E','5'),(6,'G','F','F','6');
 /*!40000 ALTER TABLE `alumnobatiz` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -55,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-03-28 16:58:19
+-- Dump completed on 2022-04-05  3:14:05
