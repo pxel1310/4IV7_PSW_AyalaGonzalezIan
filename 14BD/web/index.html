@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>14BD / Servlet</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/shortcut.png">
+</head>
+
+<body>
+    <h1>Alumnos de Batiz "BD"</h1>
+    <hr>
+    <div class="consulta" id="consulta-f">
+        <h3><i>Consultar</i> Alumnos de Batiz</h3>
+        <a href="ConsultarAlumnos"> --> Ver lista de Alumno de Batiz</a>
+    </div>
+    <br>
+    <div class="registro">
+        <form method="post" id="registro-f" name="registro-f" action="RegistrarAlumno">
+            <legend><i>Registrar</i> Nuevo Alumno de Batiz:</legend>
+            <label> Nombre del alumno <br><input type="text" name="nombre" id="nombre"
+                    onkeypress="return validar_nombre(event)" 
+                    placeholder="Ingresa el Nombre del Alumno" /></label>
+            <label> Apellido Paterno <br><input type="text" name="appat" id="appat"
+                    onkeypress="return validar_appat(event)"
+                    placeholder="Ingresa el Apellido Paterno del Alumno" /></label>
+            <label> Apellido Materno <br><input type="text" name="apmat" id="apmat"
+                    onkeypress="return validar_apmat(event)"
+                    placeholder="Ingresa el Apellido Materno del Alumno" /></label>
+            <label> Boleta <br><input type="text" name="boleta" id="boleta" 
+                    onkeypress="return validar_boleta(event)"
+                    placeholder="Ingresa la boleta Alumno" /></label>
+            <label> Telefono <br><input type="text" name="tel" id="tel" 
+                    onkeypress="return validar_tel(event)"
+                    placeholder="Ingresa el Telefono del Alumno" /></label>
+            <input type="submit" value="Registrar Nuevo Alumno" name="enviar" id="enviar" onclick="" />
+            <input type="reset" value="Borrar Datos">
+        </form>
+    </div>
+    <br>
+    <div class="eliminar">
+        <form method="post" name="eliminar-f" action="EliminarAlumno" id="eliminar-f">
+            <legend><i>Eliminar</i> Nuevo Alumno de Batiz</legend>
+            <label> Boleta <br><input type="text" name="eliminar" onkeypress="return validar_boleta(event)"
+                    placeholder="Ingresa la boleta de Alumno que desea Borrar" /></label>
+            <input type="submit" value="Alumno Eliminado">
+            <input type="reset" value="Borrar Datos">
+        </form>
+    </div>
+    <br>
+    <div class="modificar">
+        <form method="post" name="modificar-f" action="ModificarAlumno" id="modificar-f">
+            <legend><i>Modificar</i> Nuevo Alumno de Batiz</legend>
+            <label> Boleta <br><input type="text" name="modificar" onkeypress="return validar_boleta(event)"
+                    placeholder="Ingresa la boleta de Alumno que desea Modificar" /></label><br><br>
+            <legend><i>Selecciona cuales atributos quieres modificar</i></legend>
+            <label> Nombre del Alumno <input type="checkbox" name="nombre-p" id="nombre-mod"></label>
+            <label> Apellido Paterno <input type="checkbox" name="appat-p" id="appat-mod"></label>
+            <label> Apellido Materno <input type="checkbox" name="apmat-p" id="apmat-mod"></label>
+            <label> Boleta <input type="checkbox" name="boleta-p" id="boleta-mod"></label>
+            <label> Telefono <input type="checkbox" name="tel-p" id="tel-mod"></label>
+            <input type="submit" value="Alumno Modificar">
+            <input type="reset" value="Borrar Datos">
+        </form>
+    </div>
+    <footer>
+        <p><a href="../../index.html">Regresar</a></p>
+    </footer>
+    <script src="js/validarFormulario.js"></script>
+</body>
+
+</html>
