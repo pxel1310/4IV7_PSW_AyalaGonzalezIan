@@ -1,7 +1,7 @@
 <%-- 
     Document   : registroalumno
-    Created on : 4/04/2022, 03:25:06 PM
-    Author     : Alumno
+    Created on : 23/04/2022, 12:11:13 AM
+    Author     : pxel1310
 --%>
 
 <%@page contentType="text/html" language="java"
@@ -24,8 +24,8 @@
         
         URL = "jdbc:mysql://localhost/alumnos";
         userName = "root";
-        password = "n0m3l0";
-        driver = "com.mysql.jdbc.Driver";
+        password = "99310675";
+        driver = "com.mysql.cj.jdbc.Driver";
         
         try{
             Class.forName(driver);

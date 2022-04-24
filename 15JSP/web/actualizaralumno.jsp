@@ -1,8 +1,9 @@
 <%-- 
-    Document   : consultaralumno
-    Created on : 23/04/2022, 12:09:11 AM
+    Document   : borraralumno
+    Created on : 23/04/2022, 12:08:15 AM
     Author     : pxel1310
 --%>
+
 
 <%@page contentType="text/html" language="java"
         import="java.sql.*, java.util.*, java.text.*" 
@@ -14,25 +15,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        
-        <table border="2">
-            <thead>
-                <tr>
-                    <th>Boleta</th>
-                    <th>Nombre</th>
-                    <th>Apellido Paterno</th>
-                    <th>Apellido Materno</th>
-                    <th>Telefono</th>
-                    <th>Editar</th>
-                    <th>Borrar</th>
-                </tr>
-            </thead>
-            <tbody>
-                
-            
-        
-        
-        
         <% 
         //esa codigo java
         Connection con = null;
@@ -52,31 +34,32 @@
             
             try{
                 //necesitamos los parametros
-                String q = "select * from alumnobatiz order by boleta asc";
+                String nom, appat, apmat, tel;
+                int bol;
+                
+                nom = request.getParameter("nombre2");
+                appat = request.getParameter("appat2");
+                apmat = request.getParameter("apmat2");
+                tel = request.getParameter("tel2");
+                bol = Integer.parseInt(request.getParameter("boleta2"));
                 
                 set = con.createStatement();
                 
-                rs = set.executeQuery(q);
+                String q = "update alumnobatiz set nombre = '"+nom+"', "
+                        + "appat = '"+appat+"', apmat = '"+apmat+"', "
+                        + "telefono = '"+tel+"' where boleta = "+bol+" ";
                 
-                while(rs.next()){
+                int registro = set.executeUpdate(q);
                 
                 %>
-                <tr>
-                    <td><%=rs.getInt("boleta")%></td>
-                    <td><%=rs.getString("nombre")%></td>
-                    <td><%=rs.getString("appat")%></td>
-                    <td><%=rs.getString("apmat")%></td>
-                    <td><%=rs.getString("telefono")%></td>
-                    <td><a href="editaralumno.jsp?id=<%=rs.getInt("boleta")%>" >Editar</a></td>
-                    <td><a href="borraralumno.jsp?id=<%=rs.getInt("boleta")%>" >Borrar</a></td>
-                </tr>
+                 <h1>Actualizacion del Alumno Exitosa</h1>
                 <%
-                    }
+            
             }catch(SQLException es){
-                System.out.println("Error al registrar en la tabla");
+                System.out.println("Error al actualizar en la tabla");
                 System.out.println(es.getMessage());
                 %>
-                 <h1>Error al consultar la tabla de la tabla</h1>
+                 <h1>Error en la actualizacionMVCT< de la tabla</h1>
                 <%
                 
             }
@@ -94,9 +77,8 @@
         
         
         %>
-        </tbody>
-        </table>
+        
         <br>
-        <a href="index.html" >Regresar a Principal</a>  
+        <a href="index.html" >Regresar a Principal</a>
     </body>
 </html>

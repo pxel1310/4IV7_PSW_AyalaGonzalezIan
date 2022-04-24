@@ -1,7 +1,7 @@
 <%-- 
     Document   : borraralumno
-    Created on : 4/04/2022, 04:21:12 PM
-    Author     : Alumno
+    Created on : 23/04/2022, 12:08:15 AM
+    Author     : pxel1310
 --%>
 
 <%@page contentType="text/html" language="java"
@@ -24,8 +24,8 @@
         
         URL = "jdbc:mysql://localhost/alumnos";
         userName = "root";
-        password = "n0m3l0";
-        driver = "com.mysql.jdbc.Driver";
+        password = "99310675";
+        driver = "com.mysql.cj.jdbc.Driver";
         
         try{
             Class.forName(driver);
@@ -36,7 +36,6 @@
                 int id = Integer.parseInt(request.getParameter("id"));
                 
                 String q = "delete from alumnobatiz where boleta = "+id; 
-
                 set = con.createStatement();
                 
                 int borrar = set.executeUpdate(q);
