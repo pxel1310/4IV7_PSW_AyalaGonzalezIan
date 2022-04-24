@@ -1,0 +1,21 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21/04/2022, 07:19:31 AM
+    Author     : pxel1310
+*/
+html {
+    box-sizing: border-box;
+    min-height: 100%;
+}
+
+body {
+    background: rgb(153,43,79);
+    background: -webkit-linear-gradient(75deg, rgb(173, 99, 136), rgb(114, 27, 56));
+    background: linear-gradient(75deg, rgb(180, 112, 146), rgb(114, 27, 56));
+    text-align: center;
+    justify-content: center;  
+}
