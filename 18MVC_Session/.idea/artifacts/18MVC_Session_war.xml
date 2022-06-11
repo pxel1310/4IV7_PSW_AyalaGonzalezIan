@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="18MVC_Session:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>18MVC_Session</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="MVC_Session-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="18MVC_Session:war exploded" />
+    </root>
+  </artifact>
+</component>
